@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login code - Clipper</title><style>body{font:17px/1.6 system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;color:#222}a{color:#06c}code,textarea{font:15px monospace}textarea{width:100%;height:90px}nav a{margin-right:14px}</style></head><body>
+<nav><a href="index.html">Home</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+<h1>Login code</h1>
+<p>Copy this code and paste it into the terminal where <code>clip connect</code> is waiting. Do not paste it anywhere else.</p>
+<textarea id="c" readonly></textarea>
+<p><button onclick="navigator.clipboard.writeText(document.getElementById('c').value)">Copy</button></p>
+<p><small>This page only shows the code that is already in the address bar. It sends nothing anywhere.</small></p>
+<script>
+var q=new URLSearchParams(location.search);
+document.getElementById('c').value=q.get('code')||('No code. '+(q.get('error_description')||q.get('error')||''));
+</script>
+<hr><p><small>Clipper - a personal tool. Contact: via the YouTube channel @thesuperdog67</small></p>
+</body></html>
